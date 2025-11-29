@@ -1,7 +1,7 @@
 "use client";
 
 import {motion, useScroll, useTransform, MotionValue} from "framer-motion";
-import {useRef} from "react";
+import React, {useRef} from "react";
 
 interface DeepScrollLayoutProps {
   children: React.ReactNode[];
@@ -9,16 +9,22 @@ interface DeepScrollLayoutProps {
 
 export function DeepScrollLayout({children}: DeepScrollLayoutProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const childrenArray = React.Children.toArray(children);
+  const totalSections = childrenArray.length;
+
+  // Reduced height per section to make scrolling faster (70vh instead of 100vh)
+  const totalHeight = `${totalSections * 200}vh`;
+
   const {scrollYProgress} = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
   return (
-    <div ref={containerRef} className="h-[500vh] relative bg-black">
+    <div ref={containerRef} style={{height: totalHeight}} className="relative bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center perspective-1000">
-        {children.map((child, index) => (
-          <Section key={index} index={index} progress={scrollYProgress} total={children.length}>
+        {childrenArray.map((child, index) => (
+          <Section key={index} index={index} progress={scrollYProgress} total={totalSections}>
             {child}
           </Section>
         ))}

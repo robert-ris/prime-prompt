@@ -6,7 +6,7 @@ export function Testimonials() {
       role: "Digital Artist"
     },
     {
-      quote: "I used to struggle with getting the right style. Dream Prompt nailed it in seconds.",
+      quote: "I used to struggle with getting the right style. Prime Prompt nailed it in seconds.",
       author: "Mike T.",
       role: "Content Creator"
     },
