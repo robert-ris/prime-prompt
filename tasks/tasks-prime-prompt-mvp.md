@@ -37,19 +37,19 @@
   - [x] 2.3 Create OpenAI API integration (`/api/generate`).
   - [x] 2.4 Connect frontend form to API and display results.
   - [x] 2.5 Implement "Copy to Clipboard" functionality.
-- [ ] 3.0 Template System
+- [x] 3.0 Template System
   - [x] 3.1 Create `Templates` page UI (Grid/List view).
-  - [ ] 3.2 Implement "Save as Template" in Prompt Builder.
+  - [x] 3.2 Implement "Save as Template" in Prompt Builder.
   - [x] 3.3 Create API/Server Actions for Template CRUD (Create, Read, Update, Delete).
-  - [ ] 3.4 Implement Template editing modal.
-- [ ] 4.0 User Dashboard & History
-  - [ ] 4.1 Create `History` page UI.
-  - [ ] 4.2 Implement auto-saving of generated prompts to DB.
-  - [ ] 4.3 Fetch and display user history (limit 10 for free, unlimited for pro).
-  - [ ] 4.4 Implement "Reuse" button in history to load into Builder.
-- [ ] 5.0 Subscription & Payments
-  - [ ] 5.1 Set up Stripe environment variables.
-  - [ ] 5.2 Create `Pricing` page with Free/Pro tiers.
-  - [ ] 5.3 Implement Stripe Checkout flow.
-  - [ ] 5.4 Create Webhook handler to update `subscriptions` table.
-  - [ ] 5.5 Implement usage limits middleware/logic (check subscription status before generation).
+  - [x] 3.4 Implement Template editing modal.
+- [x] 4.0 User Dashboard & History
+  - [x] 4.1 Create `History` page UI.
+  - [x] 4.2 Implement auto-saving of generated prompts to DB.
+  - [x] 4.3 Fetch and display user history (limit 10 for free, unlimited for pro).
+  - [x] 4.4 Implement "Reuse" button in history to load into Builder.
+- [x] 5.0 Subscription & Payments
+  - [x] 5.1 Set up Stripe environment variables.
+  - [x] 5.2 Create `Pricing` page with Free/Pro tiers.
+  - [x] 5.3 Implement Stripe Checkout flow.
+  - [x] 5.4 Create Webhook handler to update `subscriptions` table.
+  - [x] 5.5 Implement usage limits middleware/logic (check subscription status before generation).

@@ -1,4 +1,7 @@
+"use client"
+
 import {Check} from "lucide-react";
+import Link from 'next/link';
 
 export function Pricing() {
   return (
@@ -10,18 +13,20 @@ export function Pricing() {
         <div className="text-4xl font-bold text-white mb-6">$0<span className="text-lg text-zinc-500 font-normal">/mo</span></div>
         <ul className="space-y-4 mb-8">
           <li className="flex items-center gap-3 text-zinc-300">
-            <Check className="w-5 h-5 text-green-500" /> 10 Prompts per day
+            <Check className="w-5 h-5 text-green-500" /> 3 Prompts per day
           </li>
           <li className="flex items-center gap-3 text-zinc-300">
-            <Check className="w-5 h-5 text-green-500" /> Basic styles
+            <Check className="w-5 h-5 text-green-500" /> Last 10 prompts history
           </li>
           <li className="flex items-center gap-3 text-zinc-300">
-            <Check className="w-5 h-5 text-green-500" /> Community support
+            <Check className="w-5 h-5 text-green-500" /> All platforms
           </li>
         </ul>
-        <button className="w-full py-3 rounded-lg bg-zinc-800 text-white font-medium hover:bg-zinc-700 transition-colors">
-          Get Started
-        </button>
+        <Link href="/signup">
+          <button className="w-full py-3 rounded-lg bg-zinc-800 text-white font-medium hover:bg-zinc-700 transition-colors">
+            Get Started
+          </button>
+        </Link>
       </div>
 
       {/* Pro Plan */}
@@ -29,24 +34,26 @@ export function Pricing() {
         <div className="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors" />
         <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
         <p className="text-blue-200/70 mb-6">For power users</p>
-        <div className="text-4xl font-bold text-white mb-6">$19<span className="text-lg text-zinc-500 font-normal">/mo</span></div>
+        <div className="text-4xl font-bold text-white mb-6">$9<span className="text-lg text-zinc-500 font-normal">/mo</span></div>
         <ul className="space-y-4 mb-8">
           <li className="flex items-center gap-3 text-white">
             <Check className="w-5 h-5 text-blue-400" /> Unlimited Prompts
           </li>
           <li className="flex items-center gap-3 text-white">
-            <Check className="w-5 h-5 text-blue-400" /> Advanced styles & models
+            <Check className="w-5 h-5 text-blue-400" /> Unlimited history
+          </li>
+          <li className="flex items-center gap-3 text-white">
+            <Check className="w-5 h-5 text-blue-400" /> Unlimited templates
           </li>
           <li className="flex items-center gap-3 text-white">
             <Check className="w-5 h-5 text-blue-400" /> Priority support
           </li>
-          <li className="flex items-center gap-3 text-white">
-            <Check className="w-5 h-5 text-blue-400" /> API Access
-          </li>
         </ul>
-        <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20">
-          Upgrade to Pro
-        </button>
+        <Link href="/pricing">
+          <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20">
+            Upgrade to Pro
+          </button>
+        </Link>
       </div>
     </div>
   );
